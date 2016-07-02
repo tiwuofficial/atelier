@@ -1,0 +1,45 @@
+<link rel="import" href="./top-menu-button.html">
+<link rel="import" href="./little-image-box.html">
+<link rel="import" href="./product-list.html">
+<dom-module id="top-menu-contents-products">
+    <style>
+    :host {
+        display: none;
+        padding: 0px 10px;
+    }
+    </style>
+    <template>
+        <top-menu-button on-tap="toggleProducts" id="hairpin">かんざし</top-menu-button>
+        <product-list class="hairpin">
+            <little-image-box img="img/hairpin/1.jpg">和柄折紙の簪(親娘共同制作)</little-image-box>
+            <little-image-box img="img/hairpin/1.jpg">和柄折紙の簪(親娘共同制作)</little-image-box>
+        </product-list>
+        <top-menu-button on-tap="toggleProducts" id="choker">ネックレス/チョーカー</top-menu-button>
+        <product-list class="choker">
+            <little-image-box img="img/choker/2.jpg">リボンチョーカー</little-image-box>
+            <little-image-box img="img/choker/3.jpg">和風チョーカー</little-image-box>
+            <little-image-box img="img/choker/4.jpg">レースチョーカー</little-image-box>
+        </product-list>
+        <top-menu-button>ピアス</top-menu-button>
+        <top-menu-button>LGBT's Goods</top-menu-button>
+        <top-menu-button>コンドームケース</top-menu-button>
+    </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'top-menu-contents-products',
+    toggleProducts: function(e) {
+        var $menuContents = $('top-menu-contents-products .' + e.target.id);
+        $menuContents.slideToggle();
+        var $icon = $('#' + e.target.id).find('.fa');
+        if ($icon.hasClass('fa-plus')) {
+            $icon.removeClass('fa-plus');
+            $icon.addClass('fa-minus');
+        } else {
+            $icon.removeClass('fa-minus');
+            $icon.addClass('fa-plus');
+        }
+    }
+
+});
+</script>

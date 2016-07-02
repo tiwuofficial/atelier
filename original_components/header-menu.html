@@ -1,0 +1,40 @@
+<dom-module id="header-menu">
+    <style>
+    :host {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 35px;
+        background-color: #afeeee;
+        z-index: 4;
+        text-align: center;
+    }
+    
+    :host a {
+        text-decoration: none;
+        color: white;
+        margin-top: 11px;
+        line-height: 40px;
+        font-size: 1.5rem;
+        padding-left: 10px;
+        margin-right: 6px;
+    }
+    
+    :host a+a {
+        border-left: 1px solid white;
+    }
+    </style>
+    <template>
+        <header>
+            <a href="/index.html">TOP</a>
+            <a href="/about.html">ABOUT</a>
+            <a href="/product-category.html">PRODUCT</a>
+            <a href="/contact.html">CONTACT</a>
+        </header>
+    </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'header-menu',
+});
+</script>

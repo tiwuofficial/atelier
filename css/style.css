@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: black;
+    background-color: #fffff0;
+    font-size: 1.4rem;
+    font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 35px;
+}

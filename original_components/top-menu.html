@@ -1,0 +1,48 @@
+<link rel="import" href="./top-menu-button.html">
+<link rel="import" href="./top-menu-contents-about.html">
+<link rel="import" href="./top-menu-contents-products.html">
+<dom-module id="top-menu">
+    <style>
+    :host {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    :host .top-menu-title {
+        font-size: 2rem;
+    }
+    
+    :host .top-menu-wrapper {
+        text-align: center;
+        margin-top: 15px;
+    }
+    </style>
+    <template>
+        <p class="top-menu-title">MENU</p>
+        <div class="top-menu-wrapper">
+            <top-menu-button on-tap="toggleContents" id="about">ABOUT</top-menu-button>
+            <top-menu-contents-about class="about"></top-menu-contents-about>
+            <top-menu-button on-tap="toggleContents" id="product">PRODUCT</top-menu-button>
+            <top-menu-contents-products class="product"></top-menu-contents-products>
+            <top-menu-button>CONTACT</top-menu-button>
+        </div>
+    </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'top-menu',
+    toggleContents: function(e) {
+        var $menuContents = $('.top-menu-wrapper .' + e.target.id);
+        $menuContents.slideToggle();
+        var $icon = $('#' + e.target.id).find('.fa');
+        if ($icon.hasClass('fa-plus')) {
+            $icon.removeClass('fa-plus');
+            $icon.addClass('fa-minus');
+        } else {
+            $icon.removeClass('fa-minus');
+            $icon.addClass('fa-plus');
+        }
+    }
+});
+</script>

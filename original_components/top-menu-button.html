@@ -1,0 +1,32 @@
+<dom-module id="top-menu-button">
+    <style>
+    :host {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+        border-radius: 4px;
+        background-color: #87cefa;
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 10px 0;
+        position: relative;
+    }
+    
+    :host i {
+        position: absolute;
+        right: 20px;
+    }
+    </style>
+    <template>
+        [[title]]
+        <content></content>
+        <i class="fa fa-plus" aria-hidden="true"></i>
+    </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'top-menu-button',
+});
+</script>

@@ -1,0 +1,53 @@
+<dom-module id="slide-gallery">
+    <style>
+    :host .content-gallery {
+        display: -ms-flexbox;
+        /*--- IE10 ---*/
+        display: -webkit-flex;
+        /*--- safari（PC）用 ---*/
+        display: flex;
+        padding: 20px 0;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #FFF;
+    }
+    
+    :host .content-gallery .content-gallery-card {
+        max-width: 280px;
+        min-width: 280px;
+        margin: 0 10px;
+    }
+    
+    :host .content-gallery .content-gallery-card-right-end {
+        max-width: 10px;
+        min-width: 10px;
+    }
+    
+    :host .content-gallery .content-gallery-card .image {
+        width: 100%;
+    }
+    </style>
+    <template>
+        <div class="content-gallery">
+            <div class="content-gallery-card">
+                <img class="image" src="../img/Choker/2.jpg" />
+            </div>
+            <div class="content-gallery-card">
+                <img class="image" src="../img/FlowerPierce/2.jpg" />
+            </div>
+            <div class="content-gallery-card">
+                <img class="image" src="../img/LGBT/1.jpg" />
+            </div>
+            <div class="content-gallery-card">
+                <img class="image" src="../img/TrianglePierce/1.jpg" />
+            </div>
+            <div class="content-gallery-card-right-end">
+            </div>
+        </div>
+    </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'slide-gallery',
+});
+</script>
