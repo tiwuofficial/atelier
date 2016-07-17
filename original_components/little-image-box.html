@@ -8,9 +8,15 @@
         margin-bottom: 5px;
     }
     
+    :host div {
+        height: 135px;
+        line-height: 135px;
+    }
+    
     :host img {
         width: 100%;
         height: auto;
+        vertical-align: middle;
     }
     
     :host p {
@@ -22,7 +28,9 @@
     }
     </style>
     <template>
-        <img src="" alt="[[img]]" class="lazyLoad">
+        <div>
+            <img src="" alt="[[img]]" class="lazyLoad">
+        </div>
         <p>
             <content></content>
         </p>
