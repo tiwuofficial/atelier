@@ -13,7 +13,7 @@
         })
     }
     $(function() {
-        startLazyLoad($('img.lazyLoad'));
+        // startLazyLoad($('img.lazyLoad'));
     });
 
 })($);
